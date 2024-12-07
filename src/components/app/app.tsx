@@ -17,6 +17,7 @@ import { AppHeader, IngredientDetails, Modal, OrderInfo } from '@components';
 import { useDispatch } from '../../services/store';
 import { getIngredients } from '../../services/actions/ingredientsActions';
 import { useEffect } from 'react';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 
 const App = () => {
   const navigate = useNavigate();
@@ -35,12 +36,54 @@ const App = () => {
       <Routes>
         <Route path='/' element={<ConstructorPage />} />
         <Route path='/feed' element={<Feed />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/forgot-password' element={<ForgotPassword />} />
-        <Route path='/reset-password' element={<ResetPassword />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/profile/orders' element={<ProfileOrders />} />
+        <Route
+          path='/login'
+          element={
+            <ProtectedRoute onlyUnAuth>
+              <Login />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/register'
+          element={
+            <ProtectedRoute onlyUnAuth>
+              <Register />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/forgot-password'
+          element={
+            <ProtectedRoute onlyUnAuth>
+              <ForgotPassword />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/reset-password'
+          element={
+            <ProtectedRoute onlyUnAuth>
+              <ResetPassword />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/profile'
+          element={
+            <ProtectedRoute onlyUnAuth={false}>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/profile/orders'
+          element={
+            <ProtectedRoute onlyUnAuth={false}>
+              <ProfileOrders />
+            </ProtectedRoute>
+          }
+        />
         <Route path='*' element={<NotFound404 />} />
         <Route
           path='/feed/:number'
