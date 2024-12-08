@@ -29,6 +29,7 @@ export const BurgerConstructor: FC = () => {
     dispatch(
       orderBurger([
         constructorItems.bun._id,
+        constructorItems.bun._id,
         ...constructorItems.ingredients.map((e) => e._id)
       ])
     );
