@@ -1,0 +1,1 @@
+export { ModalsContentToPage } from './modalsContentToPage';
