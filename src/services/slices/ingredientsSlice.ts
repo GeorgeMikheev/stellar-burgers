@@ -7,7 +7,7 @@ interface IIngredientsState {
   ingredients: TIngredient[] | null;
 }
 
-const initialState: IIngredientsState = {
+export const initialState: IIngredientsState = {
   isLoading: false,
   ingredients: null
 };
