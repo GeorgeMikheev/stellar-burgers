@@ -7,7 +7,7 @@ type TConstructor = {
   ingredients: TConstructorIngredient[];
 };
 
-interface IConstructorState {
+export interface IConstructorState {
   constructorItems: TConstructor;
   orderRequest: boolean;
   orderModalData: TOrder | null;
@@ -18,7 +18,7 @@ type TMoveIngredient = {
   to: number;
 };
 
-const initialState: IConstructorState = {
+export const initialState: IConstructorState = {
   constructorItems: {
     bun: null,
     ingredients: []

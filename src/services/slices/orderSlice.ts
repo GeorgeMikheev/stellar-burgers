@@ -7,7 +7,7 @@ interface IOrderState {
   order: TOrder[] | null;
 }
 
-const initialState: IOrderState = {
+export const initialState: IOrderState = {
   orders: null,
   order: null
 };
