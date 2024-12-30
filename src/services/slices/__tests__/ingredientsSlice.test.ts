@@ -1,6 +1,6 @@
 import { getIngredients } from '../../actions/ingredientsActions';
 import { ingredientsSlice, initialState } from '../ingredientsSlice';
-import { mockIngredient } from './mockData/mockIngredients';
+import { mockIngredient } from '../mockData/mockIngredients';
 import { configureStore } from '@reduxjs/toolkit';
 
 describe('initialization state', () => {

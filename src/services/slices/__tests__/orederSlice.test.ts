@@ -1,6 +1,6 @@
 import { initialState, orderSlice } from '../orderSlice';
 import { getOrderByNumber, getOrders } from '../../actions/orderActions';
-import { mockOrderByNumber, mockOrders } from './mockData/mockOrder';
+import { mockOrderByNumber, mockOrders } from '../mockData/mockOrder';
 import { configureStore } from '@reduxjs/toolkit';
 
 describe('initialization state', () => {

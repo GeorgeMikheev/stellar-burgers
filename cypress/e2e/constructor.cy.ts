@@ -11,7 +11,7 @@ describe('Burger constructor tests', () => {
   };
 
   beforeEach(() => {
-    cy.visit('http://localhost:4000/');
+    cy.visit('/');
 
     cy.intercept('GET', 'api/ingredients', { fixture: 'ingredients.json' }).as(
       'waitIngredients'
@@ -25,6 +25,11 @@ describe('Burger constructor tests', () => {
 
     cy.wait('@waitIngredients');
     cy.wait('@waitUser');
+  });
+
+  afterEach(() => {
+    localStorage.removeItem('refreshToken');
+    cy.clearCookie('accessToken');
   });
 
   it('Test adding the ingredient', () => {

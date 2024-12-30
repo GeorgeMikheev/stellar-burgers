@@ -8,9 +8,9 @@ import {
   moveToIngredient,
   setNullOrderModal
 } from '../constructorSlice';
-import { mockIngredient } from './mockData/mockIngredients';
+import { mockIngredient } from '../mockData/mockIngredients';
 import { orderBurger } from '../../actions/constructorActions';
-import { mockConstructor } from './mockData/mockConstructor';
+import { mockConstructor } from '../mockData/mockConstructor';
 
 describe('initialization state', () => {
   it('constructorSlice initialization test', () => {

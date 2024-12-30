@@ -7,7 +7,7 @@ import {
   updateUser
 } from '../../actions/userActions';
 import { initialState, userSlice } from '../userSlice';
-import { mockUserLogin } from './mockData/mockUser';
+import { mockUserLogin } from '../mockData/mockUser';
 
 describe('initialization state', () => {
   it('userSlice initialization test', () => {

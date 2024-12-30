@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { getFeed } from '../../actions/feedsActions';
 import { feedsSlice, initialState } from '../feedSlice';
-import { mockFeed } from './mockData/mockFeed';
+import { mockFeed } from '../mockData/mockFeed';
 
 describe('initialization state', () => {
   it('feedSlice initialization test', () => {
