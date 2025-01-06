@@ -6,7 +6,7 @@ interface IFeedsState {
   feeds: TOrdersData | null;
 }
 
-const initialState: IFeedsState = {
+export const initialState: IFeedsState = {
   feeds: null
 };
 
